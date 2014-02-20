@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[一蓑烟雨任平生]]></title>
+  <link href="http://zhouty.github.io/atom.xml" rel="self"/>
+  <link href="http://zhouty.github.io/"/>
+  <updated>2014-02-20T15:54:32+08:00</updated>
+  <id>http://zhouty.github.io/</id>
+  <author>
+    <name><![CDATA[周天宇]]></name>
+    <email><![CDATA[zhouty2011@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[开篇寄语]]></title>
+    <link href="http://zhouty.github.io/blog/2014/02/20/kai-pian-ji-yu/"/>
+    <updated>2014-02-20T11:07:06+08:00</updated>
+    <id>http://zhouty.github.io/blog/2014/02/20/kai-pian-ji-yu</id>
+    <content type="html"><![CDATA[<p>万事开头难，无论是写博客还是减肥T_T</p>
+
+<p>希望能够坚持下去:)</p>
+]]></content>
+  </entry>
+  
+</feed>
