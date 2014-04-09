@@ -9,8 +9,7 @@
   <meta name="author" content="周天宇">
 
   
-  <meta name="description" content="万事开头难，无论是写博客还是减肥T_T 希望能够坚持下去:)
-">
+  <meta name="description" content="轰轰烈烈的项目终于告一段落了，不得不说好久不写代码现在写几行最简单的功能就bug无数。从这个角度来看的话做做项目也是不错的，至少不会让手过于生疏。我们主要是基于libvirt用python开发了一款小型的分布式虚拟机管理系统，所以在这里先简单介绍下libvirt。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +66,54 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014-04-09/configure-libvirt-in-ubuntu/">Ubuntu12.04编译配置libvirt小记</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-09T21:51:25+08:00" pubdate data-updated="true">Apr 9<span>th</span>, 2014</time>
+        
+           | <a href="/blog/2014-04-09/configure-libvirt-in-ubuntu/#disqus_thread"
+             data-disqus-identifier="http://zhouty.github.io/blog/2014-04-09/configure-libvirt-in-ubuntu/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>轰轰烈烈的项目终于告一段落了，不得不说好久不写代码现在写几行最简单的功能就bug无数。从这个角度来看的话做做项目也是不错的，至少不会让手过于生疏。我们主要是基于<a href="http://libvirt.org/">libvirt</a>用python开发了一款小型的分布式虚拟机管理系统，所以在这里先简单介绍下libvirt。</p>
+
+<p>libvirt是一个十分强大的虚拟机管理工具集，可以用于开发上层的管理工具比如linux上的virt-manager等。它主要有三部分组件组成，分别是与hypervisor交互的守护进程libvirtd， 为上层应用提供接口的libvirt API，以及一款基于libvirt的命令行工具virsh。libvirt支持多种hypervisor比如KVM/QEMU, Xen, LXC, VirtualBox，VMWare, Parallels, Hyper-V等等，并且现在已经有多种<a href="http://libvirt.org/bindings.html">语言支持</a>，比如常用的C#, JAVA, Python, PHP, Ruby等，十分的方便。</p>
+
+<p>不过配置libvirt的过程还是有些蛋疼的。libvirt现在由Redhat公司维护，所以网上现有的配置方法大部分都是基于CentOS的，好多问题只能自己摸索。还好有给力的<a href="http://ytliu.info/">聪聪大哥</a>，帮我解决了很多问题，现在就把安装过程和碰到的问题列举一下，以便查阅。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014-04-09/configure-libvirt-in-ubuntu/">继续阅读 &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -130,6 +177,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014-04-09/configure-libvirt-in-ubuntu/">Ubuntu12.04编译配置libvirt小记</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014-02-20/kai-pian-ji-yu/">开篇寄语</a>
       </li>
     
@@ -137,11 +188,11 @@
 </section>
 <section>
   <h1>文章分类</h1>
-    <ul id="category-list"><li><a href='/blog/categories/za/'>杂 (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/virtualization/'>virtualization (1)</a></li><li><a href='/blog/categories/za/'>杂 (1)</a></li></ul>
 </section>
 <section>
   <h1>标签云</h1>
-    <span id="tag-cloud"><a href='/blog/categories/za' style='font-size: 160.0%'>杂(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/virtualization' style='font-size: 160.0%'>virtualization(1)</a> <a href='/blog/categories/za' style='font-size: 160.0%'>杂(1)</a> </span>
 </section>
 <section>
   <h1>友情链接</h1>

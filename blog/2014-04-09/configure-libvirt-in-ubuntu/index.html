@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>开篇寄语 - 一蓑烟雨任平生</title>
+  <title>Ubuntu12.04编译配置libvirt小记 - 一蓑烟雨任平生</title>
   <meta name="author" content="周天宇">
 
   
-  <meta name="description" content="万事开头难，无论是写博客还是减肥T_T 希望能够坚持下去:)
-">
+  <meta name="description" content="轰轰烈烈的项目终于告一段落了，不得不说好久不写代码现在写几行最简单的功能就bug无数。从这个角度来看的话做做项目也是不错的，至少不会让手过于生疏。我们主要是基于libvirt用python开发了一款小型的分布式虚拟机管理系统，所以在这里先简单介绍下libvirt。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://zhouty.github.io/blog/2014-02-20/kai-pian-ji-yu">
+  <link rel="canonical" href="http://zhouty.github.io/blog/2014-04-09/configure-libvirt-in-ubuntu">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="一蓑烟雨任平生" type="application/atom+xml">
@@ -70,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">开篇寄语</h1>
+      <h1 class="entry-title">Ubuntu12.04编译配置libvirt小记</h1>
     
     
       <p class="meta">
@@ -86,7 +85,7 @@
   
 
 
-<time datetime="2014-02-20T11:07:06+08:00" pubdate data-updated="true">Feb 20<span>th</span>, 2014</time>
+<time datetime="2014-04-09T21:51:25+08:00" pubdate data-updated="true">Apr 9<span>th</span>, 2014</time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://zhouty.github.io">Comments</a>
@@ -96,9 +95,62 @@
   </header>
 
 
-<div class="entry-content"><p>万事开头难，无论是写博客还是减肥T_T</p>
+<div class="entry-content"><p>轰轰烈烈的项目终于告一段落了，不得不说好久不写代码现在写几行最简单的功能就bug无数。从这个角度来看的话做做项目也是不错的，至少不会让手过于生疏。我们主要是基于<a href="http://libvirt.org/">libvirt</a>用python开发了一款小型的分布式虚拟机管理系统，所以在这里先简单介绍下libvirt。</p>
 
-<p>希望能够坚持下去:)</p>
+<p>libvirt是一个十分强大的虚拟机管理工具集，可以用于开发上层的管理工具比如linux上的virt-manager等。它主要有三部分组件组成，分别是与hypervisor交互的守护进程libvirtd， 为上层应用提供接口的libvirt API，以及一款基于libvirt的命令行工具virsh。libvirt支持多种hypervisor比如KVM/QEMU, Xen, LXC, VirtualBox，VMWare, Parallels, Hyper-V等等，并且现在已经有多种<a href="http://libvirt.org/bindings.html">语言支持</a>，比如常用的C#, JAVA, Python, PHP, Ruby等，十分的方便。</p>
+
+<p>不过配置libvirt的过程还是有些蛋疼的。libvirt现在由Redhat公司维护，所以网上现有的配置方法大部分都是基于CentOS的，好多问题只能自己摸索。还好有给力的<a href="http://ytliu.info/">聪聪大哥</a>，帮我解决了很多问题，现在就把安装过程和碰到的问题列举一下，以便查阅。</p>
+
+<!--more-->
+
+
+<p>
+首先在下载<a href="http://libvirt.org/downloads.html">源码</a>,我用的是1.1.3版本的。新的版本一般会多一些功能，而且函数的很多参数都成了可选的。首先可以在libvirt目录下运行<code>./configure</code>，libvirt会检查系统当前缺少那些依赖。一般需要安装的依赖有以下几个：</p>
+
+<pre><code>$sudo apt-get install libyajl-dev libxml++2.6-2 libxml++2.6-dev libdevmapper-dev libpciaccess-dev python-dev libnl-dev libpciaccess-dev
+</code></pre>
+
+<p>然后运行<code>make &amp;&amp; make install</code>安装。这是应该能够在python目录下的dist-packages文件夹中看到一个名为libvirt.py的文件，这就是我们要用的libvirt python API了。如果没有的话就再运行<code>sudo apt-get install python-libvirt</code>安装一遍吧。</p>
+
+<p>如果你以为到这里就大功告成了，那就大错特错了。当然你有可能上辈子积德行善，然后运行<code>sudo libvirtd -d</code>没报错，那么恭喜你，完成一半任务了。当然我肯定是没这么好的运气了，碰到的如下错误：</p>
+
+<blockquote><p> libvirtd: error while loading shared libraries: libvirt-lxc.so.0: cannot open shared object file: No such file or directory</p></blockquote>
+
+<p>这时可以运行<code>ldconfig</code>，应该就没问题了，表明我们已经启动了libvirtd进程。然后运行<code>
+virsh -c qemu:///system list</code>出现以下错误</p>
+
+<blockquote><p>error: Failed to connect socket to &lsquo;/var/run/libvirt/libvirt-sock&rsquo;: Permission denied
+error: failed to connect to the hypervisor</p></blockquote>
+
+<p>后面的错误基本上是由于权限的问题了。首先修改libvirt的配置文件<code>/etc/libvirt/libvirtd.conf</code>中的几行，将group改为用户的group，权限改为770或777</p>
+
+<blockquote><p>unix_sock_group = &lt; group >
+unix_sock_ro_perms = &lt; perms >
+unix_sock_rw_perms = &lt; perms ></p></blockquote>
+
+<p>然后又碰到了另一个错误</p>
+
+<blockquote><p>error: authentication failed: Authorization requires authentication but no agent is available.</p></blockquote>
+
+<p>libvirt采用polkit权限认证，需要添加文件 <code>/etc/polkit-1/localauthority/50-local.d/50-kvmcon-libvirt-access.pkla</code>，内容如下：</p>
+
+<blockquote><p>[ libvirt management access ]
+Identity=unix-group:libvirt
+Action=org.libvirt.unix.manage
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes</p></blockquote>
+
+<p>其中identity也可以用unix-user加用户名</p>
+
+<blockquote><p>libvirt.libvirtError: authentication failed: polkit: Error checking for authorization org.libvirt.unix.manage: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.libvirt.unix.manage is not registered</p></blockquote>
+
+<p>这时如果用&#8221;pkaction&#8221;这个命令列举所有polkit注册过的action的话是没有“org.libvirt.unix.manage&#8221;这个action的，所以应该在<code>/usr/share/polkit-1/actions/</code>目录下添加org.libvirt.unix.manage这个action，然后就应该可以了。
+最后，如果在用libvirt启动虚拟机时报错</p>
+
+<blockquote><p>error: Unknow OS type hvm</p></blockquote>
+
+<p>这时运<code>virsh capacities</code>是看不到后面的guest域的。我重新编译下qemu就可以了，如果再不行，就在libvirt的log里<code>/usr/local/var/log/libvirt/libvirtd.log或/var/log/libvirt/libvirtd.log</code>找找其他原因吧 : )</p>
 </div>
 
 
@@ -121,12 +173,12 @@
   
 
 
-<time datetime="2014-02-20T11:07:06+08:00" pubdate data-updated="true">Feb 20<span>th</span>, 2014</time>
+<time datetime="2014-04-09T21:51:25+08:00" pubdate data-updated="true">Apr 9<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/za/'>杂</a>
+    <a class='category' href='/blog/categories/virtualization/'>virtualization</a>
   
 </span>
 
@@ -156,8 +208,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2014-02-20/kai-pian-ji-yu/" title="Previous Post: 开篇寄语">&laquo; 开篇寄语</a>
       
-        <a class="basic-alignment right" href="/blog/2014-04-09/configure-libvirt-in-ubuntu/" title="Next Post: Ubuntu12.04编译配置libvirt小记">Ubuntu12.04编译配置libvirt小记 &raquo;</a>
       
     </p>
   </footer>
@@ -256,8 +308,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://zhouty.github.io/blog/2014-02-20/kai-pian-ji-yu/';
-        var disqus_url = 'http://zhouty.github.io/blog/2014-02-20/kai-pian-ji-yu/';
+        var disqus_identifier = 'http://zhouty.github.io/blog/2014-04-09/configure-libvirt-in-ubuntu/';
+        var disqus_url = 'http://zhouty.github.io/blog/2014-04-09/configure-libvirt-in-ubuntu/';
         var disqus_script = 'embed.js';
       
     (function () {

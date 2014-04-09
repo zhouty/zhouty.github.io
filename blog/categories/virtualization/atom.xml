@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[一蓑烟雨任平生]]></title>
-  <link href="http://zhouty.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Virtualization | 一蓑烟雨任平生]]></title>
+  <link href="http://zhouty.github.io/blog/categories/virtualization/atom.xml" rel="self"/>
   <link href="http://zhouty.github.io/"/>
   <updated>2014-04-09T22:16:12+08:00</updated>
   <id>http://zhouty.github.io/</id>
@@ -68,23 +68,12 @@ ResultActive=yes</p></blockquote>
 
 <blockquote><p>libvirt.libvirtError: authentication failed: polkit: Error checking for authorization org.libvirt.unix.manage: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: Action org.libvirt.unix.manage is not registered</p></blockquote>
 
-<p>这时如果用&#8221;pkaction&#8221;这个命令列举所有polkit注册过的action的话是没有“org.libvirt.unix.manage&#8221;这个action的，所以应该在<code>/usr/share/polkit-1/actions/</code>目录下添加org.libvirt.unix.manage这个action，然后就应该可以了。
+<p>这时如果用"pkaction"这个命令列举所有polkit注册过的action的话是没有“org.libvirt.unix.manage"这个action的，所以应该在<code>/usr/share/polkit-1/actions/</code>目录下添加org.libvirt.unix.manage这个action，然后就应该可以了。
 最后，如果在用libvirt启动虚拟机时报错</p>
 
 <blockquote><p>error: Unknow OS type hvm</p></blockquote>
 
 <p>这时运<code>virsh capacities</code>是看不到后面的guest域的。我重新编译下qemu就可以了，如果再不行，就在libvirt的log里<code>/usr/local/var/log/libvirt/libvirtd.log或/var/log/libvirt/libvirtd.log</code>找找其他原因吧 : )</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[开篇寄语]]></title>
-    <link href="http://zhouty.github.io/blog/2014-02-20/kai-pian-ji-yu/"/>
-    <updated>2014-02-20T11:07:06+08:00</updated>
-    <id>http://zhouty.github.io/blog/2014-02-20/kai-pian-ji-yu</id>
-    <content type="html"><![CDATA[<p>万事开头难，无论是写博客还是减肥T_T</p>
-
-<p>希望能够坚持下去:)</p>
 ]]></content>
   </entry>
   
