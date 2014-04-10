@@ -127,11 +127,11 @@ p, li {
   span { color: $base1 !important; }
   span { font-style: normal !important; font-weight: normal !important; }
 
-  .c      { color: $base01 !important; font-style: italic !important; }                     /* Comment */
-  .cm     { color: $base01 !important; font-style: italic !important; }                     /* Comment.Multiline */
-  .cp     { color: $base01 !important; font-style: italic !important;  }                     /* Comment.Preproc */
-  .c1     { color: $base01 !important; font-style: italic !important; }                     /* Comment.Single */
-  .cs     { color: $base01 !important; font-weight: bold !important; font-style: italic !important; }   /* Comment.Special */
+  .c      { color: $base01 !important; font-style: !important; }                     /* Comment */
+  .cm     { color: $base01 !important; font-style: !important; }                     /* Comment.Multiline */
+  .cp     { color: $base01 !important; font-style: !important;  }                     /* Comment.Preproc */
+  .c1     { color: $base01 !important; font-style: !important; }                     /* Comment.Single */
+  .cs     { color: $base01 !important; font-weight: bold !important; font-style: !important; }   /* Comment.Special */
   .err    { color: $solar-red !important; background: none !important; }                                            /* Error */
   .k      { color: $solar-orange !important; }                       /* Keyword */
   .o      { color: $base1 !important; font-weight: bold !important; }                       /* Operator */
@@ -139,7 +139,7 @@ p, li {
   .ow     { color: $solar-cyan !important; font-weight: bold !important; }                       /* Operator.Word */
   .gd     { color: $base1 !important; background-color: mix($solar-red, $base03, 25%) !important; display: inline-block; }               /* Generic.Deleted */
   .gd .x  { color: $base1 !important; background-color: mix($solar-red, $base03, 35%) !important; display: inline-block; }               /* Generic.Deleted.Specific */
-  .ge     { color: $base1 !important; font-style: italic !important; }                      /* Generic.Emph */
+  .ge     { color: $base1 !important; font-style: !important; }                      /* Generic.Emph */
   //.gr     { color: #aa0000 }                                          /* Generic.Error */
   .gh     { color: $base01 !important; }                                          /* Generic.Heading */
   .gi     { color: $base1 !important; background-color: mix($solar-green, $base03, 20%) !important; display: inline-block; }               /* Generic.Inserted */

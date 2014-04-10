@@ -94,7 +94,7 @@ disqus_short_name: tianyuzhou
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-7583537-4
 
 # Facebook Like
 facebook_like: false

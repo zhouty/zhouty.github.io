@@ -18,11 +18,12 @@ libvirt是一个十分强大的虚拟机管理工具集，可以用于开发上�
     $sudo apt-get install libyajl-dev libxml++2.6-2 libxml++2.6-dev libdevmapper-dev libpciaccess-dev python-dev libnl-dev libpciaccess-dev
 然后运行`make && make install`安装。这是应该能够在python目录下的dist-packages文件夹中看到一个名为libvirt.py的文件，这就是我们要用的libvirt python API了。如果没有的话就再运行`sudo apt-get install python-libvirt`安装一遍吧。
 
-如果你以为到这里就大功告成了，那就大错特错了。当然你有可能上辈子积德行善，然后运行`sudo libvirtd -d`没报错，那么恭喜你，完成一半任务了。当然我肯定是没这么好的运气了，碰到的如下错误：
+如果你以为到这里就大功告成了，那就大错特错了。当然你有可能上辈子积德行善，然后运行`sudo libvirtd -d`
+没报错，那么恭喜你，完成一半任务了。当然我肯定是没这么好的运气了，碰到的如下错误：
 
 >  libvirtd: error while loading shared libraries: libvirt-lxc.so.0: cannot open shared object file: No such file or directory
 
-这时可以运行`ldconfig`，应该就没问题了，表明我们已经启动了libvirtd进程。然后运行`
+这时可以运行```ldconfig```，应该就没问题了，表明我们已经启动了libvirtd进程。然后运行`
 virsh -c qemu:///system list`出现以下错误
 
 > 
@@ -32,8 +33,8 @@ error: failed to connect to the hypervisor
 后面的错误基本上是由于权限的问题了。首先修改libvirt的配置文件`/etc/libvirt/libvirtd.conf`中的几行，将group改为用户的group，权限改为770或777
 
 > 
-unix_sock_group = < group >
-unix_sock_ro_perms = < perms >
+unix_sock_group = < group >  
+unix_sock_ro_perms = < perms >  
 unix_sock_rw_perms = < perms >
 
 然后又碰到了另一个错误
