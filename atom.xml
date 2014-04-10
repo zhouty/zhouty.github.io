@@ -4,7 +4,7 @@
   <title><![CDATA[一蓑烟雨任平生]]></title>
   <link href="http://zhouty.github.io/atom.xml" rel="self"/>
   <link href="http://zhouty.github.io/"/>
-  <updated>2014-04-09T22:16:12+08:00</updated>
+  <updated>2014-04-10T14:33:20+08:00</updated>
   <id>http://zhouty.github.io/</id>
   <author>
     <name><![CDATA[周天宇]]></name>
@@ -35,7 +35,8 @@
 
 <p>然后运行<code>make &amp;&amp; make install</code>安装。这是应该能够在python目录下的dist-packages文件夹中看到一个名为libvirt.py的文件，这就是我们要用的libvirt python API了。如果没有的话就再运行<code>sudo apt-get install python-libvirt</code>安装一遍吧。</p>
 
-<p>如果你以为到这里就大功告成了，那就大错特错了。当然你有可能上辈子积德行善，然后运行<code>sudo libvirtd -d</code>没报错，那么恭喜你，完成一半任务了。当然我肯定是没这么好的运气了，碰到的如下错误：</p>
+<p>如果你以为到这里就大功告成了，那就大错特错了。当然你有可能上辈子积德行善，然后运行<code>sudo libvirtd -d</code>
+没报错，那么恭喜你，完成一半任务了。当然我肯定是没这么好的运气了，碰到的如下错误：</p>
 
 <blockquote><p> libvirtd: error while loading shared libraries: libvirt-lxc.so.0: cannot open shared object file: No such file or directory</p></blockquote>
 
@@ -47,8 +48,8 @@ error: failed to connect to the hypervisor</p></blockquote>
 
 <p>后面的错误基本上是由于权限的问题了。首先修改libvirt的配置文件<code>/etc/libvirt/libvirtd.conf</code>中的几行，将group改为用户的group，权限改为770或777</p>
 
-<blockquote><p>unix_sock_group = &lt; group >
-unix_sock_ro_perms = &lt; perms >
+<blockquote><p>unix_sock_group = &lt; group ><br/>
+unix_sock_ro_perms = &lt; perms ><br/>
 unix_sock_rw_perms = &lt; perms ></p></blockquote>
 
 <p>然后又碰到了另一个错误</p>
