@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 杂 | 一蓑烟雨任平生]]></title>
-  <link href="http://zhouty.github.io/blog/categories/za/atom.xml" rel="self"/>
-  <link href="http://zhouty.github.io/"/>
-  <updated>2014-04-11T15:37:18+08:00</updated>
-  <id>http://zhouty.github.io/</id>
+  <link href="http://zhouty.info/blog/categories/za/atom.xml" rel="self"/>
+  <link href="http://zhouty.info/"/>
+  <updated>2014-04-11T16:34:59+08:00</updated>
+  <id>http://zhouty.info/</id>
   <author>
     <name><![CDATA[周天宇]]></name>
     <email><![CDATA[zhouty2011@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[开篇寄语]]></title>
-    <link href="http://zhouty.github.io/blog/2014-02-20/kai-pian-ji-yu/"/>
+    <link href="http://zhouty.info/blog/2014-02-20/kai-pian-ji-yu/"/>
     <updated>2014-02-20T11:07:06+08:00</updated>
-    <id>http://zhouty.github.io/blog/2014-02-20/kai-pian-ji-yu</id>
+    <id>http://zhouty.info/blog/2014-02-20/kai-pian-ji-yu</id>
     <content type="html"><![CDATA[<p>万事开头难，无论是写博客还是减肥T_T</p>
 
 <p>希望能够坚持下去:)</p>

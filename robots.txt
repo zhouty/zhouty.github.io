@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://zhouty.github.io/sitemap.xml 
+Sitemap: http://zhouty.info/sitemap.xml 

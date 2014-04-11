@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[一蓑烟雨任平生]]></title>
-  <link href="http://zhouty.github.io/atom.xml" rel="self"/>
-  <link href="http://zhouty.github.io/"/>
-  <updated>2014-04-11T15:37:18+08:00</updated>
-  <id>http://zhouty.github.io/</id>
+  <link href="http://zhouty.info/atom.xml" rel="self"/>
+  <link href="http://zhouty.info/"/>
+  <updated>2014-04-11T16:34:59+08:00</updated>
+  <id>http://zhouty.info/</id>
   <author>
     <name><![CDATA[周天宇]]></name>
     <email><![CDATA[zhouty2011@gmail.com]]></email>
@@ -15,27 +15,27 @@
   
   <entry>
     <title type="html"><![CDATA[扬州行]]></title>
-    <link href="http://zhouty.github.io/blog/2014-04-11/yang-zhou-xing/"/>
+    <link href="http://zhouty.info/blog/2014-04-11/yang-zhou-xing/"/>
     <updated>2014-04-11T15:29:58+08:00</updated>
-    <id>http://zhouty.github.io/blog/2014-04-11/yang-zhou-xing</id>
+    <id>http://zhouty.info/blog/2014-04-11/yang-zhou-xing</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Introduction to Libvirt Python API]]></title>
-    <link href="http://zhouty.github.io/blog/2014-04-11/introduction-to-libvirt-python-api/"/>
+    <link href="http://zhouty.info/blog/2014-04-11/introduction-to-libvirt-python-api/"/>
     <updated>2014-04-11T15:08:11+08:00</updated>
-    <id>http://zhouty.github.io/blog/2014-04-11/introduction-to-libvirt-python-api</id>
+    <id>http://zhouty.info/blog/2014-04-11/introduction-to-libvirt-python-api</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Ubuntu12.04编译配置libvirt小记]]></title>
-    <link href="http://zhouty.github.io/blog/2014-04-09/configure-libvirt-in-ubuntu/"/>
+    <link href="http://zhouty.info/blog/2014-04-09/configure-libvirt-in-ubuntu/"/>
     <updated>2014-04-09T21:51:25+08:00</updated>
-    <id>http://zhouty.github.io/blog/2014-04-09/configure-libvirt-in-ubuntu</id>
+    <id>http://zhouty.info/blog/2014-04-09/configure-libvirt-in-ubuntu</id>
     <content type="html"><![CDATA[<p>轰轰烈烈的项目终于告一段落了，不得不说好久不写代码现在写几行最简单的功能就bug无数。从这个角度来看的话做做项目也是不错的，至少不会让手过于生疏。我们主要是基于<a href="http://libvirt.org/">libvirt</a>用python开发了一款小型的分布式虚拟机管理系统，所以在这里先简单介绍下libvirt。</p>
 
 <p>libvirt是一个十分强大的虚拟机管理工具集，可以用于开发上层的管理工具比如linux上的virt-manager等。它主要有三部分组件组成，分别是与hypervisor交互的守护进程libvirtd， 为上层应用提供接口的libvirt API，以及一款基于libvirt的命令行工具virsh。libvirt支持多种hypervisor比如KVM/QEMU, Xen, LXC, VirtualBox，VMWare, Parallels, Hyper-V等等，并且现在已经有多种<a href="http://libvirt.org/bindings.html">语言支持</a>，比如常用的C#, JAVA, Python, PHP, Ruby等，十分的方便。</p>
@@ -98,9 +98,9 @@ ResultActive=yes</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[开篇寄语]]></title>
-    <link href="http://zhouty.github.io/blog/2014-02-20/kai-pian-ji-yu/"/>
+    <link href="http://zhouty.info/blog/2014-02-20/kai-pian-ji-yu/"/>
     <updated>2014-02-20T11:07:06+08:00</updated>
-    <id>http://zhouty.github.io/blog/2014-02-20/kai-pian-ji-yu</id>
+    <id>http://zhouty.info/blog/2014-02-20/kai-pian-ji-yu</id>
     <content type="html"><![CDATA[<p>万事开头难，无论是写博客还是减肥T_T</p>
 
 <p>希望能够坚持下去:)</p>

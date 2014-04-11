@@ -1,35 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://zhouty.github.io/blog/2014-02-20/kai-pian-ji-yu/</loc>
+        <loc>http://zhouty.info/blog/2014-02-20/kai-pian-ji-yu/</loc>
         <lastmod>2014-02-23T15:01:01+08:00</lastmod>
     </url>
     <url>
-        <loc>http://zhouty.github.io/blog/2014-04-09/configure-libvirt-in-ubuntu/</loc>
+        <loc>http://zhouty.info/blog/2014-04-09/configure-libvirt-in-ubuntu/</loc>
         <lastmod>2014-04-10T14:33:20+08:00</lastmod>
     </url>
     <url>
-        <loc>http://zhouty.github.io/blog/2014-04-11/introduction-to-libvirt-python-api/</loc>
+        <loc>http://zhouty.info/blog/2014-04-11/introduction-to-libvirt-python-api/</loc>
         <lastmod>2014-04-11T15:37:03+08:00</lastmod>
     </url>
     <url>
-        <loc>http://zhouty.github.io/blog/2014-04-11/yang-zhou-xing/</loc>
+        <loc>http://zhouty.info/blog/2014-04-11/yang-zhou-xing/</loc>
         <lastmod>2014-04-11T15:35:41+08:00</lastmod>
     </url>
     <url>
-        <loc>http://zhouty.github.io/about/</loc>
+        <loc>http://zhouty.info/about/</loc>
         <lastmod>2014-02-23T16:20:55+08:00</lastmod>
     </url>
     <url>
-        <loc>http://zhouty.github.io/robots.txt</loc>
+        <loc>http://zhouty.info/robots.txt</loc>
         <lastmod>2014-02-23T14:32:35+08:00</lastmod>
     </url>
     <url>
-        <loc>http://zhouty.github.io/</loc>
+        <loc>http://zhouty.info/</loc>
         <lastmod>2014-04-11T15:37:03+08:00</lastmod>
     </url>
     <url>
-        <loc>http://zhouty.github.io/blog/archives/</loc>
+        <loc>http://zhouty.info/blog/archives/</loc>
         <lastmod>2014-04-11T15:37:03+08:00</lastmod>
     </url>
 </urlset>
