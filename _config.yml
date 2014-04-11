@@ -2,12 +2,14 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://zhouty.github.io
+url: http://zhouty.info
 title: 一蓑烟雨任平生
 subtitle: What I see and what I think
 author: 周天宇
 simple_search: http://google.com/search
-description: zhouty's blog
+description: keen on system techniques, searching for joys. (专注计算机系统技术，寻找生活乐趣)
+keywords: linux, virtualiztion, IO, file system, distributed system
+
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -94,7 +96,7 @@ disqus_short_name: tianyuzhou
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id: UA-7583537-4
+google_analytics_tracking_id: UA-49932750-1
 
 # Facebook Like
 facebook_like: false
