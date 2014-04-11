@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Life | 一蓑烟雨任平生]]></title>
+  <link href="http://zhouty.github.io/blog/categories/life/atom.xml" rel="self"/>
+  <link href="http://zhouty.github.io/"/>
+  <updated>2014-04-11T15:37:18+08:00</updated>
+  <id>http://zhouty.github.io/</id>
+  <author>
+    <name><![CDATA[周天宇]]></name>
+    <email><![CDATA[zhouty2011@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[扬州行]]></title>
+    <link href="http://zhouty.github.io/blog/2014-04-11/yang-zhou-xing/"/>
+    <updated>2014-04-11T15:29:58+08:00</updated>
+    <id>http://zhouty.github.io/blog/2014-04-11/yang-zhou-xing</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>

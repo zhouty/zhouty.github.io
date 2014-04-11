@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Virtualization | 一蓑烟雨任平生]]></title>
   <link href="http://zhouty.github.io/blog/categories/virtualization/atom.xml" rel="self"/>
   <link href="http://zhouty.github.io/"/>
-  <updated>2014-04-10T14:33:20+08:00</updated>
+  <updated>2014-04-11T15:37:18+08:00</updated>
   <id>http://zhouty.github.io/</id>
   <author>
     <name><![CDATA[周天宇]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction to Libvirt Python API]]></title>
+    <link href="http://zhouty.github.io/blog/2014-04-11/introduction-to-libvirt-python-api/"/>
+    <updated>2014-04-11T15:08:11+08:00</updated>
+    <id>http://zhouty.github.io/blog/2014-04-11/introduction-to-libvirt-python-api</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ubuntu12.04编译配置libvirt小记]]></title>
